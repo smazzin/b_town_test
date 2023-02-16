@@ -1,0 +1,15 @@
+<header>
+  <img src="{{ '/images/west-tech-air.png' | relative_url }}" alt="Logo" />
+</header>
+
+<nav>
+  <ul>
+    <li><a href="{{ '/' | relative_url }}">Home</a></li>
+    <li><a href="{{ '/about-us' | relative_url }}">About</a></li>
+  </ul>
+  {% for page in site.pages %}
+    {% if page.title %}
+      <li><a href="{{ page.url | relative_url }}">{{ page.title }}</a></li>
+    {% endif %}
+  {% endfor %}
+</nav>
